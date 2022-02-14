@@ -3,7 +3,7 @@ import './cart-item.styles.css';
 
 // Redux
 import { useDispatch } from 'react-redux';
-import { INCREMENT, DECREMENT, CLEAR_CART } from '../../redux/types';
+import { INCREMENT, DECREMENT, REMOVE_ITEM, CLEAR_CART } from '../../redux/types';
 
 const CartItem = ({ item: { amount: quantity, img, price, title, id } }) => {
     
@@ -13,16 +13,26 @@ const CartItem = ({ item: { amount: quantity, img, price, title, id } }) => {
         dispatch({type: INCREMENT, payload: id});
     }
 
+    const handleDecrement = ev => {
+        dispatch({type: DECREMENT, payload: id});
+    }
+
+    const handleRemoveItem = ev => {
+        dispatch({ type: REMOVE_ITEM, payload: id })
+    }
+
     return(
         <div className='cart-item'>
             <img src={img} width='75px' />
             <div className='cart-item__product-details'>
                 <h3>{ title }</h3>
                 <p>{ price }</p>
-                <button>Remove</button>
+                <button onClick={handleRemoveItem}>Remove</button>
             </div>
             <div className='cart-item__product-quantity'>
-                <span className='cart-item__button'>-</span> {quantity} <span className='cart-item__button' onClick={handleIncrement}>+</span>
+                <span className='cart-item__button' onClick={handleDecrement}>-</span> {' '}
+                    {quantity} {' '}
+                <span className='cart-item__button' onClick={handleIncrement}>+</span>
             </div>
         </div>
     )

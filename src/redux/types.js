@@ -1,4 +1,6 @@
 export const GET_TOTAL_QUANTITY = 'GET_TOTAL_QUANTITY';
+export const CALCULATE_TOTAL_AMOUNT = 'CALCULATE_TOTAL_AMOUNT';
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const REMOVE_ITEM = 'REMOVE_ITEM';
 export const CLEAR_CART = 'CLEAR_CART';
