@@ -2,3 +2,14 @@
   margin-top: 20px;
   padding: 30px;
 }
+
+.cart-list__border-bottom {
+  border-bottom: 1px solid black;
+}
+
+.cart-list__total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}

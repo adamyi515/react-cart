@@ -2,16 +2,19 @@
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
   margin-bottom: 5px;
 }
 
 .cart-item__product-details {
-  flex-basis: 80%;
+  flex-basis: 70%;
+}
+
+.cart-item__product-quantity {
+  width: 10%;
 }
 
 .cart-item__button {
   border: 1px solid black;
-  padding: 1px 8px;
+  padding: 1% 5%;
   cursor: pointer;
 }
