@@ -1,0 +1,17 @@
+.cart-item {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.cart-item__product-details {
+  flex-basis: 80%;
+}
+
+.cart-item__button {
+  border: 1px solid black;
+  padding: 1px 8px;
+  cursor: pointer;
+}

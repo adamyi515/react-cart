@@ -1,0 +1,12 @@
+.navbar {
+  background-color: lightskyblue;
+  padding: 20px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
